@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- animate css -->
+    <link rel="stylesheet" href="CSS/animate.min.css">
+    <!-- animsition  :Not working on indiv pages. only work on index.-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css" media="screen" title="no title" charset="utf-8">
+    <!-- skipper css -->
+    <link rel="stylesheet" href="CSS/skipper.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <!-- default css -->
+    <link rel="stylesheet" href="CSS/site.css">
+    <title>Pages Demo | Home</title>
+    <style media="screen">
+      body {background-image: url('img/Darkside-01.jpg')}
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid  animsition" data-animsition-out-class="fade-in-left"
+    data-animsition-out-duration="2000">
+      <!-- banner -->
+    <div class="row text-center">
+      <div class="col-md-12" style="font-family:ariel black;">
+        <div class="jumbotron">
+          <h1>Pages Demonstration</h1>
+          <p>This website serves to illustrate some different styles of websites that I am comfortable building and deploying</p>
+        </div>
+      </div>
+    </div>
+
+      <!-- navigation -->
+      <div class="row" >
+        <div class="col-md-12 animsition">
+
+          <nav>
+            <a
+              href="./index.html"
+              class="animsition-link"
+              data-animsition-in-class="fade-in"
+              data-animsition-in-duration="2000"
+              data-animsition-out-class="fade-out"
+              data-animsition-out-duration="2000"
+                >Home</a>
+            <a
+              href="./templates/blog.html"
+              class="animsition-link"
+              data-animsition-in-class="fade-in-down"
+              data-animsition-in-duration="2000"
+              data-animsition-out-class="fade-out-down"
+              data-animsition-out-duration="2000"
+                >Blog</a>
+            <a
+              href="./templates/food.html"
+              class="animsition-link"
+              data-animsition-in-class="fade-in-down"
+              data-animsition-in-duration="2000"
+              data-animsition-out-class="fade-out-down"
+              data-animsition-out-duration="2000"
+                >Food</a>
+            <a
+              href="./templates/shop.html"
+              class="animsition-link"
+              data-animsition-in-class="fade-in-down"
+              data-animsition-in-duration="2000"
+              data-animsition-out-class="fade-out-down"
+              data-animsition-out-duration="2000"
+                >Shop</a>
+            <a
+              href="./templates/chat.html"
+              class="animsition-link"
+              data-animsition-in-class="fade-in-down"
+              data-animsition-in-duration="2000"
+              data-animsition-out-class="fade-out-down"
+              data-animsition-out-duration="2000"
+                >Chat</a>
+          </nav>
+        </div>
+      </div>
+
+
+
+      <!-- modal-->
+     <ul>
+         <li><a id="demo01" href="#animatedModal">More Info</a></li>
+     </ul>
+
+     <!--DEMO01-->
+     <div id="animatedModal">
+         <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+         <div  style="margin:20px;"id="btn-close-modal" class="close-animatedModal">
+             &#x274c; CLOSE
+         </div>
+
+         <div class="modal-content">
+           <!--Your modal content goes here-> photo carousel -->
+           <div id="container">
+              <div id="theTarget">
+                  <div style="background-image: url(img/img1.jpg)"></div>
+                  <div style="background-image: url(img/img2.jpg)"></div>
+                  <div style="background-image: url(img/img3.jpg)"></div>
+                  <div style="background-image: url(img/img4.jpg)"></div>
+                  <div style="background-image: url(img/img5.jpg)"></div>
+                  <button type="button" name="button">Left</button>
+                  <button type="button" name="button">right</button>
+              </div>
+           </div>
+         </div>
+     </div> <!--End of Modal-->
+     <div class="row text-center" style="color:white">
+       <div class="col-sm-4">
+         <figure>
+           <img src="img/photo (2)test.jpg" alt="self portrait" />
+           <figcaption><strong><h4>Yep..this is me</h4></strong></figcaption>
+         </figure>
+       </div>
+       <div class="col-sm-8" style='padding:0 80px;margin-bottom:40px;'>
+         <h1>Hi, my name is Micah!</h1>
+         <p><strong style="font-size:16px;">I'm a MEAN Stack / Javascript Developer here in sunny Southern CA. When I'm not producing music for commercial license..(which is my other shin-dig), I'm eyeballs deep in code, hard at work enhancing and perfecting my web skills and working on new projects.<br><br> This is a simple and fun demonstration style web portfolio. I've crafted a few demo pages illustrating different style websites such as a blogging platform, a resturant website, an eCommerce website, and a chat room application. Check'em out, leave feedback, contact me about a project or my past projects, or you latest candy crush high score! (No I don't really play or even care about candy crush...but you can still contact me tho!) </strong><br><br>
+         <strong style="font-size:20px;"><a href="mailto:dojadeveloper@gmail.com">Send Me A Message</a></strong></p>
+       </div>
+     </div>
+
+
+
+
+
+    </div> <!-- end of container -->
+    <div class="row text-center">
+      <div class="col-sm-12">
+        <footer style="color:white">&copy Micah Dunson</footer>
+      </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+    <!-- animate js page & text transition-->
+    <script src="JS/animatedModal.min.js" ></script>
+    <!-- animsition page transition -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js" ></script>
+    <!-- skipper js photo carousel modal -->
+    <script src="JS/skipper.js" ></script>
+    <!-- bootstrap js -->
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <!-- default -->
+    <script src='JS/app.js'></script>
+  </body>
+</html>
