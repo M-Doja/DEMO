@@ -96,12 +96,16 @@ function getBlogs(){
   if (200 <= this.status < 400){
     // console.log(this.response);
     var res = JSON.parse(this.response);
+    console.log(res);
+    // console.log(res.reverse() );
     var elemStr = "";
     blogs.length = 0; // empties the array
     for (var prop in res){
       res[prop]._id = prop;
       blogs.push(res[prop]);
-      elemStr += "<hr><br><li><b>" + res[prop].title + "</b>: " + res[prop].description + " <br> " + res[prop].body + "<br><br> Author:" +  res[prop].author + "<br>" +  res[prop].date + "<br><br><button style='margin-left:10px; text-align:center;' class='btn btn-warning btn-sm' onclick='startEdit(" + (blogs.length - 1) + ")'>Edit</button></li>"
+      elemStr += "<br><li><span id='BlogTitle'>" + res[prop].title + "</span><br>Summary:  "
+      + res[prop].description + " <br>Author: <b>"
+      + res[prop].author + "</b><br>Published: " +  res[prop].date + "<br><br>" +  res[prop].body + "<br><br><button style='margin-left:10px; text-align:center;' class='btn btn-warning btn-sm' onclick='startEdit(" + (blogs.length - 1) + ")'>Edit</button></li><hr>"
       // console.log(res[prop]);
       $("#blogMessage").hide();
       $("#buttonsGoHere").html('');
@@ -178,6 +182,7 @@ document.getElementById("blogs").value = "<br><time>" + output + "</time>";
 // ---------------------------------------
 $.sortByDate = function( elements, order ) {
 		var arr = [];
+    console.log(arr);
 		elements.each(function() {
 			var obj = {},
 				$el = $( this ),
@@ -188,7 +193,7 @@ $.sortByDate = function( elements, order ) {
 				obj.html = $el[0].outerHTML;
 				obj.time = timestamp;
 
-				arr.push( obj );
+				arr.unshift( obj );
 		});
 
 		var sorted = arr.sort(function( a, b ) {
@@ -246,7 +251,7 @@ function deleteBlogs() {
     elemStr +="<li><input id='"+ blogs[i]._id + "'type='checkbox' value='false' class='form-control' style='dislay:inline-block; margin-right:5px; margin-bottom:5px;'/>" + blogs[i].title + ": " + blogs[i].description + " | " + blogs[i].body + "</li>"
     }
     $("#blogs").html(elemStr);
-    $("#buttonsGoHere").html('<button class="btn btn-success" onclick="saveDelete()">Delete</button><button class="btn btn-danger" onclick="cancel()">Cancel</button>');
+    $("#buttonsGoHere").html('<button class="btn btn-success" onclick="saveDelete()">Delete Selected</button><button class="btn btn-danger" onclick="cancel()">Cancel</button>');
 
   }
 function cancel(){

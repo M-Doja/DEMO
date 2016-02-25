@@ -68,7 +68,7 @@ function getBlogs(){
     for (var prop in res){
       res[prop]._id = prop;
       blogs.push(res[prop]);
-      elemStr += "<hr><br><li><b>" + res[prop].title + "</b>: " + res[prop].description + " <br> " + res[prop].body + "<br><br> Author:" +  res[prop].author + "<br>" +  res[prop].date + "<br><br><button style='margin-left:10px; text-align:center;' class='btn btn-warning btn-sm' onclick='startEdit(" + (blogs.length - 1) + ")'>Edit</button></li>"
+      elemStr += "<hr><br><li class='blog-post-title'><b>" + res[prop].title + "</b>: " + res[prop].description + " <br> " + res[prop].body + "<br><br> Author:" +  res[prop].author + "<br>" +  res[prop].date + "<br><br><button style='margin-left:10px; text-align:center;' class='btn btn-warning btn-sm' onclick='startEdit(" + (blogs.length - 1) + ")'>Edit</button></li>"
       console.log(res[prop]);
       $("#blogMessage").hide();
       $("#buttonsGoHere").html('');
