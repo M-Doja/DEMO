@@ -96,16 +96,14 @@ function getBlogs(){
   if (200 <= this.status < 400){
     // console.log(this.response);
     var res = JSON.parse(this.response);
-    console.log(res);
-    // console.log(res.reverse() );
     var elemStr = "";
     blogs.length = 0; // empties the array
     for (var prop in res){
       res[prop]._id = prop;
       blogs.push(res[prop]);
-      elemStr += "<br><li><span id='BlogTitle'>" + res[prop].title + "</span><br>Summary:  "
-      + res[prop].description + " <br>Author: <b>"
-      + res[prop].author + "</b><br>Published: " +  res[prop].date + "<br><br>" +  res[prop].body + "<br><br><button style='margin-left:10px; text-align:center;' class='btn btn-warning btn-sm' onclick='startEdit(" + (blogs.length - 1) + ")'>Edit</button></li><hr>"
+      elemStr += "<br><li><span id='BlogTitle'>" + res[prop].title + "</span><br>Author:<b> "
+      + res[prop].author + " </b><br> "
+      + res[prop].date + "<br><br> " +  res[prop].body + "<br>" +  res[prop].description + "<br><br><button style='margin-left:10px; text-align:center;' class='btn btn-warning btn-sm' onclick='startEdit(" + (blogs.length - 1) + ")'>Edit</button></li><hr>"
       // console.log(res[prop]);
       $("#blogMessage").hide();
       $("#buttonsGoHere").html('');
@@ -182,7 +180,6 @@ document.getElementById("blogs").value = "<br><time>" + output + "</time>";
 // ---------------------------------------
 $.sortByDate = function( elements, order ) {
 		var arr = [];
-    console.log(arr);
 		elements.each(function() {
 			var obj = {},
 				$el = $( this ),
@@ -193,7 +190,7 @@ $.sortByDate = function( elements, order ) {
 				obj.html = $el[0].outerHTML;
 				obj.time = timestamp;
 
-				arr.unshift( obj );
+				arr.push( obj );
 		});
 
 		var sorted = arr.sort(function( a, b ) {
