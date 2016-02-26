@@ -45,17 +45,8 @@ var settings = $.extend({
 
 }, options);
 
-  $("#AdminBtn").click(function() {
-    var adminKey = $("#key").val();
-    console.log(adminKey);
 
-  });
 });
-// document.getElementById('AdminBtn').addEventListener('click', function() {
-//   var adminKey = document.getElementById('key').value;
-//   console.log(adminKey);
-// }, false);
-
 
 // STICKY NAV --------------------------------------------------------
 var win      = $(window),
@@ -79,9 +70,11 @@ win.scroll(function() {
 var blogs = [];
 function showForm() {
     $(".form").toggle();
+    $("#ctrlBtn").hide();
 }
 function closeForm() {
   $(".form").toggle();
+  $("#ctrlBtn").show();
 }
 $("li").sort(function(a,b){
     return new Date($(a)) > new Date($(b));
@@ -89,10 +82,11 @@ $("li").sort(function(a,b){
     $("#blogs").prepend(this);
 })
 
-function BlogPost(title, description, body, author, Date){
+function BlogPost(title, description, body, pic, author, Date){
   this.title = title;
   this.description = description;
   this.body = body;
+  this.pic = pic;
   this.author = author;
   this.date = new Date;
 }
@@ -106,11 +100,11 @@ function getBlogs(){
     var res = JSON.parse(this.response);
     console.log(res);
     var elemStr = "";
-    var edBtn = '';
     blogs.length = 0; // empties the array
     for (var prop in res){
       res[prop]._id = prop;
       blogs.push(res[prop]);
+      console.log(res);
       elemStr += "<br><li><span id='BlogTitle'>" + res[prop].title + "</span><br>Summary:  "
       + res[prop].description + " <br>Author: <b>"
       + res[prop].author + "</b><br>Published: " +  res[prop].date + "<br><br>" +  res[prop].body + "<br><br>"
@@ -131,21 +125,22 @@ function getBlogs(){
 }
 getBlogs();
 
- // THIS CODE BLOCK CONTROLS WHAT IS DISPLAYED WHEN ADMIN KEY IS INPUT
-document.getElementById('AdminBtn').addEventListener('click', function() {
-  var Key = 'admin';
-  var adminKey = document.getElementById('key').value;
-    if(adminKey === Key) {
-      $('.editBtn').css( 'display', 'inline-block')
-      $('#delBtn').css( 'display', 'inline-block')
-    }
-    else {
-      alert('Please enter a valid Admin Key!');
-      document.getElementById('key').value = '';
-    }
-    console.log(adminKey);
-    document.getElementById('key').value = '';
-}, false);
+//  // THIS CODE BLOCK CONTROLS WHAT IS DISPLAYED WHEN ADMIN KEY IS INPUT
+// document.getElementById('AdminBtn').addEventListener('click', function() {
+//   var Key = 'admin';
+//   var keyStr = document.getElementById('key').value;
+//   var adminkey = keyStr.toLowerCase();
+//     if(adminkey === Key) {
+//       $('.editBtn').css( 'display', 'inline-block')
+//       $('#delBtn').css( 'display', 'inline-block')
+//     }
+//     else {
+//       alert('Please enter a valid Admin Key!');
+//       document.getElementById('key').value = '';
+//     }
+//     console.log(adminkey);
+//     document.getElementById('key').value = '';
+// }, false);
 
 
 function startEdit(index){

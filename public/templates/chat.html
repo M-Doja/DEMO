@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./../CSS/skipper.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css" />
     <!-- default css -->
     <link rel="stylesheet" href="./../CSS/site.css">
     <title>Pages Demo | Chat</title>
@@ -137,17 +136,6 @@
 
       </div> <!-- end of container -->
     <script type="text/javascript">
-      // var onComplete = function(error) {
-      //   if (error) {
-      //     console.log('Synchronization failed');
-      //   } else {
-      //   console.log('Synchronization succeeded');
-      //   }
-      // };
-      fredRef.remove();
-      // Same as the previous example, except we will also log
-      // a message when the delete has finished synchronizing
-
       var chatRef = new Firebase("https://pages-chat.firebaseio.com");
       var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
       chatRef.onAuth(function(authData) {
@@ -161,8 +149,6 @@
           });
         }
       });
-
-      chatRef.remove();
     </script>
     <!-- animsition : Not working see css-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js" ></script>
