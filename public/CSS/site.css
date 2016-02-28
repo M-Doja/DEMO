@@ -46,7 +46,7 @@ figure img {border-radius: 8px;margin-top: 10px;}
   margin:20px;
   font-size: 2em;
   color: white;
-  background-color: rgb(240, 53, 4);
+  /*background-color: rgb(240, 53, 4);*/
 
 }
 .form {
@@ -68,6 +68,16 @@ figure img {border-radius: 8px;margin-top: 10px;}
 #menu li a {  width: 160px;  margin-bottom: 20px;}
 #menuBtn {  margin-top: 10px;}
 #menuBtn h3 {  margin:10px auto;  font-size:2em;}
+
+
+/*STORE PAGE*/
+.box {display: inline-block;height:140px;width:140px;border: 2px black solid;margin-bottom: 10px;margin-left: 2px;}
+
+
+
+
+
+
 
         /*side nav*/
     .nav-container {
