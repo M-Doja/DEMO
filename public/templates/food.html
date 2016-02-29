@@ -102,49 +102,67 @@
 
 <!-- sidenav -->
 <div class="push" style="margin-bottom:40px;text-align:center;margin:0 auto;">
-  <a data-target="#menu"  data-toggle='collapse' class="menu-link menu-lk">Menu</a>
+  <a data-toggle="modal" data-target="#menuModal" class="menu-link menu-lk">Menu</a>
   <a href="#about"  class="menu-lk">About Us</a>
   <a href="#events"  class="menu-lk">Events</a>
   <div style="height:1px;background-color:white;max-width:100%"></div>
 
 <nav style="z-index:999;background-color:#666"id="menu" class="collapse"  role="navigation">
-<div class="row" style="margin-top:20px;">
-
-  <div class="col-xs-4">
-    <a id="link"style='background-color:black;color:white;' class="btn btn-default" data-toggle="modal" data-target="#myModal1"><img src="/img/appet.jpg" alt="" width='170' />  Appetizers</a>
-  </div>
-
-  <div class="col-xs-4">
-    <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2"><img src="/img/salad.jpg" alt="" width='170' />  Salads</a>
-  </div>
-
-  <div class="col-xs-4">
-    <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3"><img src="/img/dinner1.jpg" alt="" width='190' height='126'/>  Entrees</a>
-  </div>
-</div>
-<div class="row" style="margin-top:10px;">
-  <div class="col-xs-4">
-    <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal4"><img src="/img/soup.jpg" alt="" width='200' height='126' />  Sides</a>
-  </div>
-
-  <div class="col-xs-4">
-      <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal5"><img src="/img/dessert.jpg" alt="" width='170' />  Dessert</a>
-  </div>
-
-  <div class="col-xs-4">
-      <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal6"><img src="/img/bev.jpg" alt="" width='170' height='126' />  Beverages</a><br>
-  </div>
-
-
-</div>
-<p style="font-family:serif;font-size:26px;color:white;padding:5px;">
-  Don't forget to make reservations!<br>(805) 555-5555
-</p>
-<p style="color:white;">
-  Business Hrs: M-F 10a - 9p / Sat 2p -Midnight / Sun - Closed
-</p>
-<a style="display:block;margin-top:10px;"data-target="#menu"  data-toggle='collapse' class="menu-link menu-lk" >&#x2716</a>
+<a style="display:block;margin-top:10px;"data-dismiss="modal"class="menu-link menu-lk" >&#x2716</a>
 </nav>
+
+<!-- MENU Modal -->
+<div id="menuModal" class="modal fade" role="dialog">
+  <div class="" style="margin-left:500px;">
+
+    <!-- Modal content-->
+    <div class="modal-content" style="width:1000px;background-color:transparent;border:none;margin-left:0px;">
+      <div class="modal-body" style="max-width:1000px;">
+        <div class="row" style="margin-top:20px;">
+          <a style="display:block;margin-top:10px;background-color:white;"data-dismiss="modal" >&#x2715 CLOSE</a>
+          <div class="col-xs-4">
+            <a id="link"style='background-color:black;color:white;' class="btn btn-default" data-toggle="modal" data-target="#myModal1"><img src="/img/appet.jpg" alt="" width='170' />  Appetizers</a>
+          </div>
+
+          <div class="col-xs-4">
+            <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2"><img src="/img/salad.jpg" alt="" width='170' />  Salads</a>
+          </div>
+
+          <div class="col-xs-4">
+            <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3"><img src="/img/dinner1.jpg" alt="" width='190' height='126'/>  Entrees</a>
+          </div>
+        </div>
+        <div class="row" style="margin-top:10px;">
+          <div class="col-xs-4">
+            <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal4"><img src="/img/soup.jpg" alt="" width='200' height='126' />  Sides</a>
+          </div>
+
+          <div class="col-xs-4">
+              <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal5"><img src="/img/dessert.jpg" alt="" width='170' />  Dessert</a>
+          </div>
+
+          <div class="col-xs-4">
+              <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal6"><img src="/img/bev.jpg" alt="" width='170' height='126' />  Beverages</a><br>
+          </div>
+
+        </div>
+        <div style="background-color:rgba(255,255,255,0.8);border-radius:6px;margin:40px;">
+          <p style="font-family:serif;font-size:26px;color:black;padding:5px;">
+            Don't forget to make reservations!<br>(805) 555-5555
+          </p>
+          <p style="color:black;padding:15px;"><strong>
+            Business Hrs: M-F 10a - 9p / Sat 2p -Midnight / Sun - Closed
+          </strong></p>
+        </div>
+
+
+      </div>
+      <div class="text-center" style="margin-left:500px;padding-bottom:20px;margin-top:20px;">
+        <button type="button" class="btn btn-default btn-block" style='background-color:transparent;border:none;color:white' data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> <!--end menu modal-->
 
 
 
@@ -307,11 +325,11 @@
       Chilton habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
     </p>
   </div>
-</div><hr>
-<div class="container">
+</div><hr id="events">
+<div class="container"  style="margin-top:40px;">
 
 
-  <div class="text-center row" id="events">
+  <div class="text-center row" >
     <h1>Events</h1>
     <div class="col-md-5" style="">
       <h3>gallery</h3>
