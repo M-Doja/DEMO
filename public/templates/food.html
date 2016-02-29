@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./../CSS/site.css">
     <title>Pages Demo | Food</title>
     <style media="screen">
+        p . {padding: 0;}
        /*Below..this is how to customize calendar with content*/
         .fc-day8:after {content:'hello world';margin-left:10px;color: brown;font-family: ariel black;}
         .fc-day8 {content:'hello world'; margin:auto;background-color: tan;}
@@ -36,31 +37,31 @@
       <!-- navigation -->
       <div class="row" >
         <div class="col-md-12 animsition" style="text-align:center;">
-          <div>
-            <a style="text-decoration: none;"
+          <nav style="background-color:#000">
+            <a
               href="/"
               class="animsition-link"
-              data-animsition-out-class="fade-out-down"
-              data-animsition-out-duration="2000"
               data-animsition-in-class="fade-in-down"
               data-animsition-in-duration="2000"
-                ><p class='navText' >Home</p></a>
-            <a style="text-decoration: none;"
+              data-animsition-out-class="fade-out-down"
+              data-animsition-out-duration="2000"
+                >Home</a>
+            <a
               href="./../templates/blog.html"
               class="animsition-link"
-              data-animsition-out-class="fade-out-down"
-              data-animsition-out-duration="2000"
               data-animsition-in-class="fade-in-down"
               data-animsition-in-duration="2000"
-                ><p class='navText' >Blog</p></a>
-            <a style="text-decoration: none;"
-              href="./../templates/food.html"
-              class="animsition-link"
-              data-animsition-in-class="fade-in"
-              data-animsition-in-duration="2000"
-              data-animsition-out-class="fade-out"
+              data-animsition-out-class="fade-out-down"
               data-animsition-out-duration="2000"
-                ><p class='navText' >Food</p></a>
+                >Blog</a>
+          <a
+            href="./../templates/food.html"
+            class="animsition-link"
+            data-animsition-in-class="fade-in-down"
+            data-animsition-in-duration="2000"
+            data-animsition-out-class="fade-out-down"
+            data-animsition-out-duration="2000"
+              >Food</a>
             <a style="text-decoration: none;"
               href="./../templates/shop.html"
               class="animsition-link"
@@ -68,7 +69,7 @@
               data-animsition-out-duration="2000"
               data-animsition-in-class="fade-in-down"
               data-animsition-in-duration="2000"
-                ><p class='navText' >Shop</p></a>
+                >Shop</a>
             <a style="text-decoration: none;"
               href="./../templates/chat.html"
               class="animsition-link"
@@ -76,8 +77,8 @@
               data-animsition-out-duration="2000"
               data-animsition-in-class="fade-in-down"
               data-animsition-in-duration="2000"
-                ><p class='navText' >Chat</p></a>
-          </div>
+                >Chat</a>
+          </nav>
         </div>
       </div>
 
@@ -395,7 +396,7 @@
     <div class="row " style="margin-top:80px;">
       <a style="margin-left:75px;" href="#">Top</a>
       <div class="col-sm-12 text-center">
-        <footer style="color:white">&copy Micah Dunson</footer>
+        <footer style="color:white">&copy 2016 Phoja Unlimited LLC</footer>
       </div>
     </div>
 

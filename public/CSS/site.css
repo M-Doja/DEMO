@@ -4,7 +4,7 @@ body { font-family: sans-serif;}
 
 nav {
   text-align: center;
-  background-color: rgb(124, 187, 252);
+  /*background-color: rgb(124, 187, 252);*/
 }
 nav.fixed {
   position:fixed;
@@ -76,7 +76,7 @@ figure img {border-radius: 8px;margin-top: 10px;}
 
 
 
-
+#animatedModal.animated {background-color: black;}
 
 
         /*side nav*/

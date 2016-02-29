@@ -16,6 +16,7 @@
     <title>Pages Demo | Home</title>
     <style media="screen">
       body {background-image: url('/img/Darkside-01.jpg')}
+      div #btn-close-modal .close-animatedModal {background-color:white;}
     </style>
   </head>
   <body>
@@ -35,7 +36,7 @@
       <div class="row" >
         <div class="col-md-12 animsition">
 
-          <nav>
+          <nav style="background-color:rgba(255,255,255,0.5);border-radius:5px;color:black">
             <a
               href="./"
               class="animsition-link"
@@ -84,14 +85,16 @@
 
       <!-- modal-->
      <ul>
-         <li><a id="demo01" href="#animatedModal">More Info</a></li>
+
+         <!-- <li><a id="demo01" href="#animatedModal">More Info</a></li> -->
+
      </ul>
 
      <!--DEMO01-->
-     <div id="animatedModal">
+     <div id="animatedModal" style="background-color:#000;">
          <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
          <div  style="margin:20px;"id="btn-close-modal" class="close-animatedModal">
-             &#x274c; CLOSE
+               &#x274c; CLOSE
          </div>
 
          <div class="modal-content">
@@ -117,9 +120,9 @@
          </figure>
        </div>
        <div class="col-sm-8" style='padding:0 80px;margin-bottom:40px;'>
-         <h1>Hi, my name is Micah!</h1>
-         <p><strong style="font-size:16px;">I'm a MEAN Stack / Javascript Developer here in sunny Southern CA. When I'm not producing music for commercial license..(which is my other shin-dig), I'm eyeballs deep in code, hard at work enhancing and perfecting my web skills and working on new projects.<br><br> This is a simple and fun demonstration style web portfolio. I've crafted a few demo pages illustrating different style websites such as a blogging platform, a resturant website, an eCommerce website, and a chat room application. Check'em out, leave feedback, contact me about a project or my past projects, or you latest candy crush high score! (No I don't really play or even care about candy crush...but you can still contact me tho!) </strong><br><br>
-         <strong style="font-size:20px;"><a href="mailto:dojadeveloper@gmail.com">Send Me A Message</a></strong></p>
+         <h1> Micah Dunson </h1>
+         <div><strong style="font-size:16px;"><h3>I'm a MEAN Stack / Javascript Developer</h3><br> When I'm not producing music for commercial license..(which is my other shin-dig), I'm eyeballs deep in code, hard at work enhancing and perfecting my web skills and working on new projects.<br><br>  Check out the site, leave feedback, contact me about a project or my past projects. </strong><br><br>
+         <strong style="font-size:20px;"><a href="mailto:dojadeveloper@gmail.com">Send Me A Message</a></strong></div>
        </div>
      </div>
 
@@ -130,7 +133,7 @@
     </div> <!-- end of container -->
     <div class="row text-center">
       <div class="col-sm-12">
-        <footer style="color:white">&copy Micah Dunson</footer>
+        <footer style="color:white">&copy 2016 Phoja Unlimited LLC</footer>
       </div>
     </div>
 

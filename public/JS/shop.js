@@ -39,7 +39,8 @@
         },
             '#/shop': {
             form: 'frmShop',
-            controller: 'shop'
+            controller: 'shop',
+            authRequired: true // must be logged in to get here
         },
             '#/profile': {
             form: 'frmProfile',
