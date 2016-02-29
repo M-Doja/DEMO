@@ -61,6 +61,10 @@ function showForm() {
     $(".form").toggle();
     // $("#ctrlBtn").hide();
 }
+function showMenu() {
+    $("#menu").toggle();
+    // $("#ctrlBtn").hide();
+}
 function closeForm() {
   $(".form").toggle();
   // $("#ctrlBtn").show();
