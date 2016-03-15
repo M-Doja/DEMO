@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="./../CSS/skipper.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
     <!-- default css -->
     <link rel="stylesheet" href="./../CSS/site.css">
     <title>Pages Demo | Food</title>
     <style media="screen">
+       .spacer{height:50px;}
         p . {padding: 0;}
        /*Below..this is how to customize calendar with content*/
         .fc-day8:after {content:'hello world';margin-left:10px;color: brown;font-family: ariel black;}
@@ -27,6 +29,8 @@
         .modal { margin-left: -400px;}
         #modelPic2 {margin-left: -300px;margin-top: 20px;}
         #modalB { margin-left: -500px;}
+        #myModal1, #myModal2, #myModal3, #myModal4, #myModal5, #myModal6 {margin-left:30px;font-family:Josefin Sans;}
+        .model h4{font-weight:700;}
     </style>
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
@@ -94,7 +98,7 @@
         <div class="text-center">
           <img src="./../img/meat.jpg" style="max-width:100%"alt="" />
         </div>
-          <!-- <h1 id='restName' style="font-family:Lobster;text-align:center;color: rgba(255,25,25,0.7);">Le Chateau Phoja</h1> -->
+
       </div>
       <h1 style="font-family:Lobster;text-align:center;color: rgba(255,25,25,0.7);margin-top:60px;margin-bottom:40px;">Le Chateau Phoja  ~  Gourmet Foods</h1>
     </div>
@@ -119,17 +123,18 @@
     <div class="modal-content" style="width:1000px;background-color:transparent;border:none;margin-left:0px;">
       <div class="modal-body" style="max-width:1000px;">
         <div class="row" style="margin-top:20px;">
-          <a style="display:block;margin-top:10px;background-color:white;"data-dismiss="modal" >&#x2715 CLOSE</a>
+          <a style="display:block;background-color:white;"data-dismiss="modal" >&#x2715 CLOSE</a>
+          <div class="spacer"></div>
           <div class="col-xs-4">
             <a id="link"style='background-color:black;color:white;' class="btn btn-default" data-toggle="modal" data-target="#myModal1"><img src="/img/appet.jpg" alt="" width='170' />  Appetizers</a>
           </div>
 
           <div class="col-xs-4">
-            <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2"><img src="/img/salad.jpg" alt="" width='170' />  Salads</a>
+            <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2"><img src="/img/salad.jpg" alt="" width='170' />Salads</a>
           </div>
 
-          <div class="col-xs-4">
-            <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3"><img src="/img/dinner1.jpg" alt="" width='190' height='126'/>  Entrees</a>
+          <div class="col-xs-4" style="margin-top:-3px;margin-bottom:3px;">
+            <a style='background-color:black;color:white' type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3"><img src="/img/dinner1.jpg" alt="" width='190' height='115' />  Entrees</a>
           </div>
         </div>
         <div class="row" style="margin-top:10px;">
@@ -168,21 +173,44 @@
 
 <div class="row">
   <div class="col-md-6">
-        <!-- Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Open Modal #1</button><br> -->
 
     <!-- Modal 1 Appetizers-->
-    <div id="myModal1" class="modal fade" role="dialog">
+    <div id="myModal1" class="modal fade" role="dialog" style="">
       <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title" style="font-family:Josefin Sans;">Appetizers</h4>
           </div>
           <div class="modal-body">
-            <p>Modal #1 Here.</p>
+            <h3>THREE CHEESE GARLIC BREAD</h3>
+            <p>French bread topped with fresh garlic and a hot blend of Cheddar, Jack and Parmesan cheeses.</p>
+            <p>5.95</p><br>
+
+            <h3>FIRE-GRILLED FRESH ARTICHOKE</h3>
+            <p>Served with our house-made lemon aioli and our signature basil pesto mayo for dipping.</p>
+            <p>6.50</p><br>
+
+            <h3>STEAKHOUSE CHILI NACHOS</h3>
+            <p>Crisp tortilla chips heaped with our steak chili, Jack and Cheddar cheeses, fresh pico de gallo, pickled jalapeños and sour cream.</p>
+            <p>7.95</p><br>
+
+            <h3>CRAB STUFFED MUSHROOMS</h3>
+            <p>Sautéed mushrooms stuffed with lump crab meat served over a creamy lemon butter sauce.</p>
+            <p>5.95</p>
+            <br>
+
+            <h3>SEARED PEPPERED AHI* (SMALL)</h3>
+            <p>Sashimi-style Tuna seared rare and placed atop an Asian slaw. Served with a creamy ginger-soy sauce.</p>
+            <p>8.95</p><br>
+
+            <h3>CRISPY BRUSSELS SPROUTS & RIPPED POTATOES</h3>
+            <p>malt vinegar aioli</p>
+            <p>7.50</p><br>
+
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -191,9 +219,6 @@
 
       </div>
     </div>
-
-    <!-- Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Open Modal #2</button><br> -->
 
     <!-- Modal 2 Salads-->
     <div id="myModal2" class="modal fade" role="dialog">
@@ -203,10 +228,34 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title">Salads & Soups</h4>
           </div>
           <div class="modal-body">
-            <p>Modal #2 Here also!</p>
+            <h3>SESAME SALAD</h3>
+            <p>Mixed greens, red peppers, chopped cilantro, sliced almonds and sesame seeds tossed in sesame vinaigrette. Top with grilled chicken, Ahi Tuna or grilled Salmon.</p>
+            <p>8.50</p><br>
+
+            <h3>HOUSE SALAD</h3>
+            <p>Mixed lettuce with Napa cabbage, dressing of choice, cucumbers, Monterey Jack and Cheddar cheese, tomatoes, red onions and homemade croutons.</p>
+            <p>6.95</p><br>
+
+            <h3>BLUE CHEESE WEDGE SALAD</h3>
+            <p>A cool, crisp wedge of fresh iceberg lettuce, chopped bacon, grape tomatoes, red onions, Blue Cheese dressing and Blue Cheese crumbles and topped with a sweet balsamic glaze.</p>
+            <p>7.50</p><br>
+
+            <h3>FRENCH ONION SOUP</h3>
+            <p>Made with our world-famous onions and topped with melted Provolone cheese.</p>
+            <p>7.50</p><br>
+
+            <h3>CLAM CHOWDER</h3>
+            <p>New england style, chopped clams, potatoes</p>
+            <p>6.50</p><br>
+
+            <h3>CHICKEN TORTILLA</h3>
+            <p>Creamy white cheddar soup, roasted pasilla, tortilla strips, pico de gallo, avocado, cilantro</p>
+            <p>6.95</p><br>
+
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -215,8 +264,6 @@
 
       </div>
     </div>
-        <!-- Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Open Modal  #3 </button><br> -->
 
     <!-- Modal 3 Entrees-->
     <div id="myModal3" class="modal fade" role="dialog">
@@ -226,10 +273,26 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title">Entrees</h4>
           </div>
           <div class="modal-body">
-            <p>Modal #3 right Here.</p>
+            <h3>PENNE WITH CHICKEN</h3>
+            <p>Mushrooms, asparagus, sun-dried tomatoes, marsala cream sauce, parmesan</p>
+            <p>16.95</p><br>
+
+            <h3>SPICY JAMBALAYA</h3>
+            <p>Blackened shrimp, chicken-andouille sausage, peppers, crawfish, cajun cream sauce</p>
+            <p>17.95</p><br>
+
+            <h3>ORANGE PEEL CHICKEN</h3>
+            <p>Baby corn, bok choy, orange glaze, jasmine or brown rice</p>
+            <p>14.95</p><br>
+
+            <h3>CHICKEN SCHNITZEL</h3>
+            <p>Swiss, fried cabbage, tomato bacon onion jam, mayo, telera roll, curry ketchup</p>
+            <p>15.50</p><br>
+
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -239,8 +302,6 @@
       </div>
     </div>
 
-    <!-- Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4">Open Modal #4</button><br> -->
 
     <!-- Modal 4 Sides-->
     <div id="myModal4" class="modal fade" role="dialog">
@@ -250,10 +311,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title">Sides</h4>
           </div>
           <div class="modal-body">
             <p>Modal #4 Here doing it!</p>
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -262,8 +324,6 @@
 
       </div>
     </div>
-        <!-- Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal5">Open Modal #5</button><br> -->
 
     <!-- Modal 5 Dessert-->
     <div id="myModal5" class="modal fade" role="dialog">
@@ -273,7 +333,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title">Desserts</h4>
           </div>
           <div class="modal-body">
             <p>Modal #5 in the house.</p>
@@ -286,8 +346,6 @@
       </div>
     </div>
 
-    <!-- Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal6">Open Modal #6</button> -->
 
     <!-- Modal 6 Beverages-->
     <div id="myModal6" class="modal fade" role="dialog">
@@ -297,7 +355,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
+            <h4 class="modal-title">Beverages</h4>
           </div>
           <div class="modal-body">
             <p>Modal #6 Here also in the house!</p>
@@ -338,7 +396,7 @@
       <ul>
           <li><a id="demo01" href="#animatedModal" style="color:red;">More Info</a></li>
       </ul>
-      <img id="myImg1"class='img-responsive'src="/img/rest1.jpg" style="margin-bottom:20px;"alt="" data-toggle="modal" data-target="#myModalA"/>
+
 
       <div id="animatedModal" style="background-color:red;">
           <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
@@ -350,6 +408,7 @@
             <!--Your modal content goes here-> photo carousel -->
             <div id="container">
                <div id="theTarget">
+                 <img id="myImg1"class='img-'src="/img/rest1.jpg" style="margin-bottom:20px;"alt="" data-toggle="modal" data-target="#myModalA"/>
                    <div style="background-image: url(img/rest1.jpg)"></div>
                    <div style="background-image: url(img/rest2.jpg)"></div>
                    <div style="background-image: url(img/img3.jpg)"></div>
