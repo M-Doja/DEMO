@@ -56,11 +56,6 @@ win.scroll(function() {
 
 // BLOG PAGE-----------------------------------------------------------
 
-// TOGGLE FORM TO ADD NEW BLOG
-function showForm() {
-    $(".form").toggle();
-    // $("#ctrlBtn").hide();
-}
 function showMenu() {
     $("#menu").toggle();
     // $("#ctrlBtn").hide();
@@ -87,6 +82,8 @@ document.getElementById('AdminBtn').addEventListener('click', function() {
       $('#delBtn').css( 'display', 'inline-block');
       // $('.editBtn').css( 'display', 'inline-block');
       $('#visitor').css( 'display', 'none');
+      $("#adPan").css( 'display', 'none');
+      $("#ctrlBtn").css( 'margin-top', '40px');
     }
     else {
       alert('Please enter a valid Admin Key!');

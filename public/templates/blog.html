@@ -19,25 +19,100 @@
     <title>Pages Demo | Blog</title>
     <style media="screen">
       #blogPic {margin-bottom: 40px;}
-      #blogTitle, #blogDescription, #blogAuthor, #blogPhotoURL {width: 300px;margin-left:-150px;}
-      .blog-title{font-size: 5em; font-family: sans-serif;}
-      #blogBody { margin-top:-218px;margin-left:10px;margin-bottom: 80px;width:500px;height: 250px;}
-      #BlogTitle {font-size: 2em;}
+      #blogTitle, #blogDescription, #blogAuthor, #blogPhotoURL {width: 285px;}
+      .blog-title{font-size: 2.5em; font-family: sans-serif;}
+      #blogDiv{}
+
+
+      #blogForm {margin-top: 50px;}
+      @media (min-width:375px){#blogForm {padding:0 7%;}}
+      @media (min-width:425px){#blogForm {padding:0 15%;}}
+      #blogBody {margin-bottom:20px;width:285px;height: 250px;}
+      @media (min-width:768px){
+        #blogForm {padding:0 5%;}
+        #blogBody{margin-left:330px;margin-top:-300px;width:300px;}
+      }
+      @media (min-width:1024px) {
+        #blogBody{width:500px;}
+        #AdminBtn{margin-right: 30px;}
+      }
+      @media (min-width:1440px) {
+        #blogBody{width:700px;}
+        /*#AdminBtn{margin-right: 30px;}*/
+      }
+
+      #BlogTitle {font-size: 2em;margin-top: 50px;}
       #buttonsGoHere {display: inline-block;padding:0 250px;}
       ul {list-style: none;}
       /*.editBtn,*/
-       #delBtn {display: none}
+      #delBtn {display: none}
       #picUp input {margin:250px; }
       #blogPhoto {max-width: 200px;}
       #ctrlBtn {margin-bottom: 20px;margin-top:-40px;}
       .hr {height:1px;background-color: black;}
+      #navBtn {display: none;}
+      @media (max-width:980px){
+        nav a{display:none;}
+        #navBtn{display: inline-block;}
+        .blog-header{margin-top:50px;}
+        #AdminBtn{margin-right:30px;}
+        .text-right{margin-bottom: -100px;margin-left:5px;}
+      }
+      @media (min-width:780px){
+        .blog-title{font-size: 5em; font-family: sans-serif;}
+      }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+    <script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
 
 </head>
 <body style="background-color:rgb(124, 187, 252)">
     <div class="container">
       <div class="col-md-12 animsition" data-animsition-out-class="fade-in-left"
       data-animsition-out-duration="2000">
+
+      <nav class="sideNavContainer">
+        <div id="mySidenav" class="sidenav" style="padding-top:60px;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><b style='color:white;padding-top:40px;display:block'>&times</b></a>
+          <a href="/" onclick="closeNav()" class="animsition-link"
+          data-animsition-in-class="fade-in"
+          data-animsition-in-duration="2000"
+          data-animsition-out-class="fade-out"
+          data-animsition-out-duration="2000">Home</a>
+          <a href="./../templates/blog.html" onclick="closeNav()" class="animsition-link"
+          data-animsition-in-class="fade-in"
+          data-animsition-in-duration="2000"
+          data-animsition-out-class="fade-out"
+          data-animsition-out-duration="2000">Blog</a>
+          <a href="./../templates/food.html" onclick="closeNav()" class="animsition-link"
+          data-animsition-in-class="fade-in"
+          data-animsition-in-duration="2000"
+          data-animsition-out-class="fade-out"
+          data-animsition-out-duration="2000">Food</a>
+          <a href="./../templates/shop.html" onclick="closeNav()" class="animsition-link"
+          data-animsition-in-class="fade-in"
+          data-animsition-in-duration="2000"
+          data-animsition-out-class="fade-out"
+          data-animsition-out-duration="2000">Shop</a>
+          <a href="./../templates/chat.html" onclick="closeNav()" class="animsition-link"
+          data-animsition-in-class="fade-in"
+          data-animsition-in-duration="2000"
+          data-animsition-out-class="fade-out"
+          data-animsition-out-duration="2000">Chat</a>
+        </div>
+      </nav>
+
+      <!-- Use any element to open/show the overlay navigation menu -->
+      <div id='navBtn' style="font-size:30px;cursor:pointer;background-color: rgb(124, 187, 252);max-width:100%;position: fixed;top: 0px;right: 0px;left:0px;z-index: 999;" onclick="openNav()">☰ MENU</div>
+
+
         <nav style="background-color:rgb(124, 187, 252)">
           <a
             href="/"
@@ -94,38 +169,41 @@
       </div>
 
       <!-- BANNER IMAGE -->
-      <img id="blogPic"src="https://od.lk/s/MV8xMzEyNDQ3ODhf/blogBanner2.jpg" class="img-responsive" alt="" />
+      <img id="blogPic"src="./../img/blogBanner2.jpg" class="img-responsive" alt="" />
 
       <!-- ADMIN ACCESS PANEL -->
-      <div class="text-right" >
+      <h4 style="padding-right:125px;"id="visitor"> Welcome visitor</h4>
+      <h4 id='msg'></h4>
+      <div id='adPan'class="text-right" >
         <h4 style="padding-right:125px;"id="msg"></h4>
-        <h4 style="padding-right:125px;"id="visitor"> Welcome visitor</h4>
-        <br><input type="text" id="key" value='' class="text-center" required placeholder="Enter Admin Key" style="margin:10px 20px 10px -20px;border-radius:5px;">
-        <input type="text" id="AdminName" value='' class="text-center"placeholder="Enter Name (Optional)" style="margin:10px 20px 10px -20px;border-radius:5px;">
+        <br><input type="text" id="key" value='' class="text-center" required placeholder="Enter Admin Key" style="margin:10px 20px 10px -20px;border-radius:5px;"><br>
+        <input type="text" id="AdminName" value='' class="text-center"placeholder="Enter Name (Optional)" style="margin:10px 20px 10px -20px;border-radius:5px;"><br>
         <button class="btn btn-default" id="AdminBtn">Admin Access Panel</button>
 
       </div>
 
       <!-- BLOG CONTROLS BUTTONS-->
       <div id="ctrlBtn">
-        <a class="btn btn-danger" type="button" onclick="showForm()" data-target="#blogForm"><img src="./../img/newPost.png" width='50' alt="" /><p style="color:white">Add Post</p></a>
+        <a class="btn btn-danger" type="button" data-toggle="collapse" data-target="#blogForm"><img src="./../img/newPost.png" width='50' alt="" /><p style="color:white">Add Post</p></a>
         <a style='width:83px;' id='delBtn' class="btn btn-danger" onclick="deleteBlogs()"><img src="./../img/trash.png" width='50' alt="" /><p style="color:white">Delete</p></a>
       </div>
 
       <!-- ADD BLOG FORM -->
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="form-inline form collapse" id="blogForm">
+
+      <div class="row text-center">
+        <div class="col-xs-12 text-center">
+          <div id='blogForm'class="collapse">
             <p id='blogMessage'></p>
 
         		<input class="form-control" placeholder="Title (required)..." id="blogTitle"><br><br>
         		<input class="form-control" placeholder="Description..." id="blogDescription"><br><br>
             <input class="form-control" placeholder="Photo Url..." id="blogPhotoURL"><br><br>
             <input class="form-control" placeholder="Author (required)..." id="blogAuthor"><br><br>
+            <textarea class="form-control"   placeholder="Body (required)..." id="blogBody"></textarea>
 
               <button style='' class="btn btn-primary" onclick="saveBlog()" onClick="window.location.reload()">Submit</button>
-              <button style='' class="btn btn-primary" onclick="closeForm()"  data-target="#blogForm">Cancel</button>
-        		<textarea class="form-control"   placeholder="Body (required)..." id="blogBody"></textarea>
+              <button style='' class="btn btn-primary" data-toggle="collapse" data-target="#blogForm">Cancel</button>
+
         	</div>
           <hr style="background-color:black;height:2px;">
           <div id="buttonsGoHere" style="text-align:center;margin:0 auto;">

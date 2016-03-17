@@ -16,13 +16,63 @@
     <title>Pages Demo | Home</title>
     <style media="screen">
       body {background-image: url('/img/Darkside-01.jpg')}
-
+      #navBtn {display: none;}
+      @media (max-width:780px){
+        .container-fluid .animsition{display:none;}
+        #navBtn{display: inline-block;}
+        #boom{margin-top:50px;}
+        .jumbotron {margin-top:60px;}
+      }
     </style>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+    <script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
   </head>
   <body>
     <div class="container-fluid  animsition" data-animsition-out-class="fade-in-left"
     data-animsition-out-duration="2000">
-      <!-- banner -->
+
+    <nav class="sideNavContainer">
+      <div id="mySidenav" class="sidenav " style="padding-top:60px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><b style='color:white;padding-top:40px;display:block'>&times</b></a>
+        <a href="/" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Home</a>
+        <a href="./templates/blog.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Blog</a>
+        <a href="./templates/food.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Food</a>
+        <a href="./templates/shop.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Shop</a>
+        <a href="./templates/chat.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Chat</a>
+      </div>
+    </nav>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <div id='navBtn' style="font-size:30px;cursor:pointer;background-color: #120103;max-width:100%;position: fixed;top: 0px;right: 0px;left:0px;z-index: 999;" onclick="openNav()">☰ MENU</div>
+
     <div class="row text-center">
       <div class="col-md-12" style="font-family:ariel black;">
         <div class="jumbotron">
@@ -32,7 +82,6 @@
       </div>
     </div>
 
-      <!-- navigation -->
       <div class="row" >
         <div class="col-md-12 animsition">
 
@@ -82,6 +131,14 @@
       </div>
 
 
+      <!-- <nav id="mainNav">
+        <a href="/">Home</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/contact.html">Contact</a>
+      </nav>-->
+
+
+
 
       <!-- modal-->
      <ul>
@@ -115,7 +172,7 @@
      <div class="row text-center" style="color:white">
        <div class="col-sm-4">
          <figure>
-           <img src="img/photo (2)test.jpg" alt="self portrait" />
+           <img class="img-responsive"src="img/photo (2)test.jpg" alt="self portrait" />
            <figcaption><strong><h4>Yep..this is me</h4></strong></figcaption>
          </figure>
        </div>
@@ -138,8 +195,7 @@
     </div>
 
 
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+
     <!-- animate js page & text transition-->
     <script src="JS/animatedModal.min.js" ></script>
     <!-- animsition page transition -->

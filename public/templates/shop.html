@@ -16,12 +16,36 @@
     <title>Pages Demo | Shop</title>
 
     <style media="screen">
+      header {margin-top:20px;z-index: -9999}
       form {display: none;}
+      #navBtn{display: block;margin-bottom:40px;!z-index: 99999999;}
     </style>
+    <script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
   </head>
   <body>
     <div class="container-fluid animsition" data-animsition-out-class="fade-in-left"
     data-animsition-out-duration="2000">
+
+    <nav class="sideNavContainer">
+      <div id="mySidenav" class="sidenav" style="padding-top:60px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><b style='color:white;padding-top:40px;display:block'>&times</b></a>
+        <a href="/" onclick="closeNav()">Home</a>
+        <a href="./../templates/blog.html" onclick="closeNav()">Blog</a>
+        <a href="./../templates/food.html" onclick="closeNav()">Food</a>
+        <a href="./../templates/shop.html" onclick="closeNav()">Shop</a>
+        <a href="./../templates/chat.html" onclick="closeNav()">Chat</a>
+      </div>
+    </nav>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <div id='navBtn' style="font-size:30px;cursor:pointer;background-color: #120103;max-width:100%;position: fixed;top: 0px;right: 0px;left:0px;z-index: 999;" onclick="openNav()">☰ MENU</div>
 
 
       <!-- navigation -->
@@ -75,7 +99,7 @@
 
       <div class="row">
         <header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
-            <div class="container">
+            <div class="container ">
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> <span class="sr-only">Toggle navigation</span>
                        <span class="icon-bar"></span>
@@ -87,7 +111,10 @@
                 </div>
 
                 <nav style="background-color:#222" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav ">
+                        <li> <a href="/">Return Back Home</a>
+
+                        </li>
                         <li> <a href="#/">Login</a>
 
                         </li>
@@ -145,6 +172,10 @@
             <!-- LOGOUT -->
             <form id="frmLogout" role="form">
                  <h2>You are logged out!</h2>
+                 <br><br>
+                 <div style="background-color:yellow;width:100%;width:300px;text-center">
+                   <h4 >Currently Under Construction</h4>
+                 </div>
             </form>
             <!-- / LOGOUT -->
 

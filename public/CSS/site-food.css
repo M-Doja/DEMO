@@ -1,0 +1,17 @@
+   body,html {background-color:black;}
+   /*.col-xs-4{}*/
+   .spacer{height:50px;}
+    p . {padding: 0;}
+   /*Below..this is how to customize calendar with content*/
+    /*.fc-day8:after {content:'hello world';margin-left:10px;color: brown;font-family: ariel black;}
+    .fc-day8 {content:'hello world'; margin:auto;background-color: tan;}
+    .fc-day15:after {content:'hello world'; margin:auto;background-color: white;}*/
+
+    #modalPic1 {margin-top: 20px;}
+    .modal { margin-left: -400px;}
+    #modelPic2 {margin-left: -300px;margin-top: 20px;}
+    #modalB { margin-left: -500px;}
+    #myModal1, #myModal2, #myModal3, #myModal4, #myModal5, #myModal6 {margin-left:30px;font-family:Josefin Sans;}
+    .model h4{font-weight:700;}
+    .modal-content {margin-left: 60px;}
+    @media (min-width:320px){.pic {margin-top:60px;}}

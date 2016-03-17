@@ -25,6 +25,14 @@
 
     <!-- Firechat -->
     <script src="https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js"></script>
+    <script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
 
     <!-- Custom CSS -->
     <style>
@@ -44,16 +52,62 @@
         -moz-box-shadow: 0 5px 25px #666;
         box-shadow: 0 5px 25px #666;
       }
+      #navBtn {display: none;}
+      @media (max-width:780px){
+        .container-fluid .animsition{display:none;}
+        #navBtn{display: inline-block;}
+        #boom{margin-top:50px;}
+      }
+      @media (min-width:768px){#chatwrap {margin-left:0;}}
+      @media (min-width:1024px){#chatwrap {margin-left:50px;}}
+      @media (min-width:1440px){#chatwrap {margin-left:120px;}}
+      @media (min-width:2560px){#chatwrap {margin-left:680px;}}
     </style>
   </head>
   <body style="background-image:url('../img/Darkside-05.jpg');">
     <div class="container-fluid animsition" data-animsition-out-class="fade-in-left"
     data-animsition-out-duration="2000">
+
+    <nav class="sideNavContainer">
+      <div id="mySidenav" class="sidenav" style="padding-top:60px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><b style='color:white;padding-top:40px;display:block'>&times</b></a>
+        <a href="/" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Home</a>
+        <a href="./../templates/blog.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Blog</a>
+        <a href="./../templates/food.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Food</a>
+        <a href="./../templates/shop.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Shop</a>
+        <a href="./../templates/chat.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Chat</a>
+      </div>
+    </nav>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <div id='navBtn' style="font-size:30px;cursor:pointer;background-color: rgb(161, 38, 38);max-width:100%;position: fixed;top: 0px;right: 0px;left:0px;z-index: 999;" onclick="openNav()">☰ MENU</div>
+
+
       <!-- banner -->
     <div class="row">
       <div class="col-md-12">
         <div class="text-center">
-          <h1 style="color:white;background-color:rgba(0,0,0,0.8)"><strong>Chat Boom Boom Room </strong></h1>
+          <h1 id='boom' style="color:white;background-color:rgba(0,0,0,0.8)"><strong>Chat Boom Boom Room </strong></h1>
         </div>
       </div>
     </div>
@@ -120,7 +174,7 @@
             4. Update the room id for auto-entry with a public room you have created
          -->
 
-          <div class="row text-center container">
+          <div class="row text-center container" id='chatwrap'style="">
             <div class="col-sm-6" style="color:black;background-color:rgba(255,255,255,0.8);margin-top:50px;padding-bottom:40px;">
               <h1>Chat Time</h1>
               <hr style="background-color:black;height:2px;">

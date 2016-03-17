@@ -17,32 +17,75 @@
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
     <!-- default css -->
     <link rel="stylesheet" href="./../CSS/site.css">
+    <link rel="stylesheet" href="./../CSS/site-food.css">
     <title>Pages Demo | Food</title>
-    <style media="screen">
-       .spacer{height:50px;}
-        p . {padding: 0;}
-       /*Below..this is how to customize calendar with content*/
-        .fc-day8:after {content:'hello world';margin-left:10px;color: brown;font-family: ariel black;}
-        .fc-day8 {content:'hello world'; margin:auto;background-color: tan;}
-        .fc-day15:after {content:'hello world'; margin:auto;background-color: white;}
-        #modalPic1 {margin-top: 20px;}
-        .modal { margin-left: -400px;}
-        #modelPic2 {margin-left: -300px;margin-top: 20px;}
-        #modalB { margin-left: -500px;}
-        #myModal1, #myModal2, #myModal3, #myModal4, #myModal5, #myModal6 {margin-left:30px;font-family:Josefin Sans;}
-        .model h4{font-weight:700;}
-        .modal-content {margin-left: 60px;}
-    </style>
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
     <script class="cssdesk" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
     <!-- bootstrap js -->
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
     <script class="cssdesk" src="//arshaw.com/js/fullcalendar-1.5.3/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    <style media="screen">
+      #regMenBtn{display: none;}
+      @media (min-width:780px) {
+          #hidMenBtn{display: none}
+          #regMenBtn{display: inline;}
+        }
+      @media(min-width:320px){#mobileMenuClose {margin-right:-230px;} .fc-header-title h2 {font-size: 17px;} .fc-button-content{display:none;}}
+      @media(min-width:375px){#mobileMenuClose {margin-right:-280px;}}
+      @media(min-width:425px){#mobileMenuClose {margin-right:-330px;} #mobileMenuClose a {display: block;}.fc-button-content{display:inline;}}
+      @media(min-width:768px){#mobileMenuClose {margin-right:-680px;}#break {display: none;}}
+      @media(min-width:1024px){#cont {margin-left:-78px;}}
+      @media(min-width:1440px){#cont {margin-left:115px;}}
+      @media(min-width:2560px){#cont {margin-left:650px;}}
+
+    </style>
   </head>
-  <body style="background-color:black">
+  <body style="">
     <div class="container-fluid animsition" data-animsition-out-class="fade-in-left"
     data-animsition-out-duration="2000">
+
+    <nav class="sideNavContainer">
+      <div id="mySidenav" class="sidenav" style="padding-top:60px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><b style='color:white;padding-top:40px;display:block'>&times</b></a>
+        <a href="/" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Home</a>
+        <a href="./../templates/blog.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Blog</a>
+        <a href="./../templates/food.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Food</a>
+        <a href="./../templates/shop.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Shop</a>
+        <a href="./../templates/chat.html" onclick="closeNav()" class="animsition-link"
+        data-animsition-in-class="fade-in"
+        data-animsition-in-duration="2000"
+        data-animsition-out-class="fade-out"
+        data-animsition-out-duration="2000">Chat</a>
+      </div>
+    </nav>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <div id='navBtn' style="font-size:30px;cursor:pointer;background-color: #120103;max-width:100%;position: fixed;top: 0px;right: 0px;left:0px;z-index: 999;" onclick="openNav()">☰ MENU</div>
 
       <!-- navigation -->
       <div class="row" >
@@ -96,18 +139,33 @@
     <div class="row">
       <div class="col-md-12">
 
-        <div class="text-center">
+        <div class="text-center pic">
           <img src="./../img/meat.jpg" style="max-width:100%"alt="" />
         </div>
 
       </div>
-      <h1 style="font-family:Lobster;text-align:center;color: rgba(255,25,25,0.7);margin-top:60px;margin-bottom:40px;">Le Chateau Phoja  ~  Gourmet Foods</h1>
+      <h1 style="font-family:Lobster;text-align:center;color: rgba(255,25,25,0.7);margin-top:60px;margin-bottom:40px;padding:0 10px;">Le Chateau Phoja  ~  Gourmet Foods</h1>
     </div>
 
 
 <!-- sidenav -->
 <div class="push" style="margin-bottom:40px;text-align:center;margin:0 auto;">
-  <a data-toggle="modal" data-target="#menuModal" class="menu-link menu-lk">Menu</a>
+
+
+  <a class="menu-link menu-lk" id='hidMenBtn' data-toggle="collapse" data-target="#demo">Menu</a>
+
+<div id="demo" class="collapse" style="background-color:#fff;padding:20px 5px;">
+  <a id='mobileMenuClose' data-toggle="collapse" data-target="#demo">&times</a>
+  <h4>Today's Specials</h4>
+  <h3>SESAME SALAD</h3>
+  <p>Mixed greens, red peppers, chopped cilantro, sliced almonds and sesame seeds tossed in sesame vinaigrette. Top with grilled chicken, Ahi Tuna or grilled Salmon. 6.95</p>
+  <h3>CHICKEN SCHNITZEL</h3>
+  <p>Swiss, fried cabbage, tomato bacon onion jam, mayo, telera roll, curry ketchup & fresh broccoli with garlic butter. 13.50</p>
+  <h3>Epsilon</h3>
+  <p>Peanut parfait, dulce de leche ice cream, orange marmalade, cocoa sponge, kinako and dry miso. 5.95</p>
+</div>
+
+  <a data-toggle="modal" data-target="#menuModal" id='regMenBtn'class="menu-link menu-lk">Menu</a><br id='break'>
   <a href="#about"  class="menu-lk">About Us</a>
   <a href="#events"  class="menu-lk">Events</a>
   <div style="height:1px;background-color:white;max-width:100%"></div>
@@ -116,13 +174,14 @@
 <a style="display:block;margin-top:10px;"data-dismiss="modal"class="menu-link menu-lk" >&#x2716</a>
 </nav>
 
+
 <!-- MENU Modal -->
 <div id="menuModal" class="modal fade" role="dialog">
   <div class="" style="margin-left:500px;">
 
     <!-- Modal content-->
-    <div class="modal-content" style="width:1000px;background-color:transparent;border:none;margin-left:60px;">
-      <div class="modal-body" style="max-width:1000px;margin-left:60px;">
+    <div class="modal-content" id='cont' style="width:1000px;background-color:transparent;border:none;">
+      <div class="modal-body" id='bod'style="max-width:1000px;margin-left:-10px;">
         <div class="row" style="margin-top:20px;">
           <a style="display:block;background-color:white;"data-dismiss="modal" >&#x2715 CLOSE</a>
           <div class="spacer"></div>
@@ -452,13 +511,12 @@
   <div class="row container">
 
 
-  <div class="col-md-6">
+  <div class="text-center" id="about">
 
-    <img src="./../img/appet.jpg" class="img-responsive" style='z-index:-100;margin-top:40px;margin-left:10px;clear:both;float:left' alt="" />
-  </div>
-  <div class="col-md-6 text-center" id="about" >
+    <img src="./../img/appet.jpg" class="img-responsive" style='z-index:-100;margin-top:40px;padding:10px;clear:both;float:left' alt="" />
+
     <h1 style="display:inline-block;margin-top:40px;">About Le Phoja Chateau</h1>
-    <p style="margin-top:40px;color:#999">
+    <p style="margin-top:40px;color:#999;padding:10px;">
       Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
 
       Chilton habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
@@ -474,7 +532,7 @@
       <h3>gallery</h3>
 
       <!-- Trigger the modal with a button -->
-      <ul>
+      <ul style="list-style:none;">
           <li><a id="demo01" href="#animatedModal" style="color:red;">More Info</a></li>
       </ul>
 
